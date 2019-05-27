@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>C:/Users/EXAM/Documents/Gridea/output</id>
+    <id>https://wyid.github.io</id>
     <title>Gridea</title>
-    <updated>2019-05-27T02:37:44.989Z</updated>
+    <updated>2019-05-27T06:35:50.192Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="C:/Users/EXAM/Documents/Gridea/output"/>
-    <link rel="self" href="C:/Users/EXAM/Documents/Gridea/output/atom.xml"/>
+    <link rel="alternate" href="https://wyid.github.io"/>
+    <link rel="self" href="https://wyid.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>C:/Users/EXAM/Documents/Gridea/output/images/avatar.png</logo>
-    <icon>C:/Users/EXAM/Documents/Gridea/output/favicon.ico</icon>
+    <logo>https://wyid.github.io/images/avatar.png</logo>
+    <icon>https://wyid.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>C:/Users/EXAM/Documents/Gridea/output/post/hello-gridea/index.html</id>
-        <link href="C:/Users/EXAM/Documents/Gridea/output/post/hello-gridea/index.html">
+        <id>https://wyid.github.io/post/hello-gridea</id>
+        <link href="https://wyid.github.io/post/hello-gridea">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
