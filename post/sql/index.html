@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | wy</title>
+<title>sql | wy</title>
 <meta name="description" content="你不一样">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,12 +91,39 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">sql</h2>
+            <div class="post-date">2019-05-29 22:05</div>
             
-              <a class="tag" href="https://wyid.github.io/tag/gridea">Gridea</a>
+            <div class="post-content">
+              <pre><code class="language-sql">select * from testcard where ent_id in(select id from enrollment where batch_id=4618);
+
+ALTER TABLE testcard 
+DISABLE CONSTRAINT OSTC.INX_TESTCARD_ENT_SUB_CAR; 
+
+ALTER TABLE testcard  
+ENABLE CONSTRAINT OSTC.INX_TESTCARD_ENT_SUB_CAR;  
+</code></pre>
+<p>查看表的完整约束：
+select dbms_metadata.get_ddl('TABLE','EMP') from dual;</p>
+
+            </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wyid.github.io/post/hello-gridea">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
           </div>
+
         </div>
       </div>
     </div>

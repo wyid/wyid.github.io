@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wyid.github.io</id>
     <title>wy</title>
-    <updated>2019-05-29T13:56:53.981Z</updated>
+    <updated>2019-05-29T15:05:18.954Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wyid.github.io"/>
     <link rel="self" href="https://wyid.github.io/atom.xml"/>
@@ -10,6 +10,24 @@
     <logo>https://wyid.github.io/images/avatar.png</logo>
     <icon>https://wyid.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, wy</rights>
+    <entry>
+        <title type="html"><![CDATA[sql]]></title>
+        <id>https://wyid.github.io/post/sql</id>
+        <link href="https://wyid.github.io/post/sql">
+        </link>
+        <updated>2019-05-29T14:56:18.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-sql">select * from testcard where ent_id in(select id from enrollment where batch_id=4618);
+
+ALTER TABLE testcard 
+DISABLE CONSTRAINT OSTC.INX_TESTCARD_ENT_SUB_CAR; 
+
+ALTER TABLE testcard  
+ENABLE CONSTRAINT OSTC.INX_TESTCARD_ENT_SUB_CAR;  
+</code></pre>
+<p>查看表的完整约束：
+select dbms_metadata.get_ddl('TABLE','EMP') from dual;</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://wyid.github.io/post/hello-gridea</id>
