@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" >
 
-<title>sql | wy</title>
+<title>SQL-删除重复数据 | wy</title>
 <meta name="description" content="你不一样">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://wyid.github.io/favicon.ico?v=1559142316193">
+<link rel="shortcut icon" href="https://wyid.github.io/favicon.ico?v=1559185851054">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wyid.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://wyid.github.io">
-        <img src="https://wyid.github.io/images/avatar.png?v=1559142316193" class="site-logo">
+        <img src="https://wyid.github.io/images/avatar.png?v=1559185851054" class="site-logo">
         <h1 class="site-title">wy</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -92,29 +92,38 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">sql</h2>
-            <div class="post-date">2019-05-29 22:05</div>
+            <h2 class="post-title">SQL-删除重复数据</h2>
+            <div class="post-date">2019-05-30 11:05</div>
             
             <div class="post-content">
-              <pre><code class="language-sql">select * from testcard where ent_id in(select id from enrollment where batch_id=4618);
-
-ALTER TABLE testcard 
-DISABLE CONSTRAINT OSTC.INX_TESTCARD_ENT_SUB_CAR; 
-
-ALTER TABLE testcard  
-ENABLE CONSTRAINT OSTC.INX_TESTCARD_ENT_SUB_CAR;  
-</code></pre>
-<p>查看表的完整约束：
-select dbms_metadata.get_ddl('TABLE','EMP') from dual;</p>
+              <p>查询及删除重复记录的SQL语句</p>
+<p>1、查找表中多余的重复记录，重复记录是根据单个字段（Id）来判断</p>
+<p>select * from 表 where Id in (select Id from 表 group byId having count(Id) &gt; 1)</p>
+<p>2、删除表中多余的重复记录，重复记录是根据单个字段（Id）来判断，只留有rowid最小的记录</p>
+<p>DELETE from 表 WHERE (id) IN ( SELECT id FROM 表 GROUP BY id HAVING COUNT(id) &gt; 1) AND ROWID NOT IN (SELECT MIN(ROWID) FROM 表 GROUP BY id HAVING COUNT(*) &gt; 1);</p>
+<p>3、查找表中多余的重复记录（多个字段）</p>
+<p>select * from 表 a where (a.Id,a.seq) in(select Id,seq from 表 group by Id,seq having count(*) &gt; 1)</p>
+<p>4、删除表中多余的重复记录（多个字段），只留有rowid最小的记录</p>
+<p>delete from 表 a where (a.Id,a.seq) in (select Id,seq from 表 group by Id,seq having count(<em>) &gt; 1) and rowid not in (select min(rowid) from 表 group by Id,seq having count(</em>)&gt;1)</p>
+<p>5、查找表中多余的重复记录（多个字段），不包含rowid最小的记录</p>
+<p>select * from 表 a where (a.Id,a.seq) in (select Id,seq from 表 group by Id,seq having count(<em>) &gt; 1) and rowid not in (select min(rowid) from 表 group by Id,seq having count(</em>)&gt;1)</p>
 
             </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://wyid.github.io/tag/3TkDahxcr" class="tag">
+                    SQL
+                  </a>
+                
+              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://wyid.github.io/post/hello-gridea">
+                <a href="https://wyid.github.io/post/sql-yue-shu">
                   <h3 class="post-title">
-                    Hello Gridea
+                    SQL-索引约束
                   </h3>
                 </a>
               </div>

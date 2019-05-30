@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>About Me | wy</title>
+<title>SQL-索引约束 | wy</title>
 <meta name="description" content="你不一样">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,14 +92,56 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">About Me</h2>
-            <div class="post-date">2019-01-25 19:01</div>
+            <h2 class="post-title">SQL-索引约束</h2>
+            <div class="post-date">2019-05-30 11:05</div>
             
             <div class="post-content">
-              <p>好好学习，天天向上！</p>
+              <p>1、创建索引</p>
+<blockquote>
+<p>create index 索引名 on 表名(列名);</p>
+</blockquote>
+<p>2、删除索引</p>
+<blockquote>
+<p>drop index 索引名;</p>
+</blockquote>
+<p>3、创建组合索引</p>
+<blockquote>
+<p>create index 索引名 on 表名(列名1,,列名2);</p>
+</blockquote>
+<p>4、查询索引
+--根据索引名，查询表索引字段</p>
+<blockquote>
+<p>select * from user_ind_columns where index_name='索引名';
+--根据表名，查询一张表的索引
+select * from user_indexes where table_name='表名';</p>
+</blockquote>
+<p>5、禁用和重建
+--禁用索引</p>
+<blockquote>
+<p>alter index INDEX_BMP_DUTY_H unusable;
+--重新启用索引，重建索引
+alter index INDEX_BMP_DUTY_H rebuild;</p>
+</blockquote>
 
             </div>
             
+              <div class="tag-container">
+                
+                  <a href="https://wyid.github.io/tag/3TkDahxcr" class="tag">
+                    SQL
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wyid.github.io/post/hello-gridea">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
             
 
             
