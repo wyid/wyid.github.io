@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://wyid.github.io/favicon.ico?v=1559185851054">
+<link rel="shortcut icon" href="https://wyid.github.io/favicon.ico?v=1559199068633">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wyid.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://wyid.github.io">
-        <img src="https://wyid.github.io/images/avatar.png?v=1559185851054" class="site-logo">
+        <img src="https://wyid.github.io/images/avatar.png?v=1559199068633" class="site-logo">
         <h1 class="site-title">wy</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -98,15 +98,25 @@
             <div class="post-content">
               <p>查询及删除重复记录的SQL语句</p>
 <p>1、查找表中多余的重复记录，重复记录是根据单个字段（Id）来判断</p>
+<blockquote>
 <p>select * from 表 where Id in (select Id from 表 group byId having count(Id) &gt; 1)</p>
+</blockquote>
 <p>2、删除表中多余的重复记录，重复记录是根据单个字段（Id）来判断，只留有rowid最小的记录</p>
+<blockquote>
 <p>DELETE from 表 WHERE (id) IN ( SELECT id FROM 表 GROUP BY id HAVING COUNT(id) &gt; 1) AND ROWID NOT IN (SELECT MIN(ROWID) FROM 表 GROUP BY id HAVING COUNT(*) &gt; 1);</p>
+</blockquote>
 <p>3、查找表中多余的重复记录（多个字段）</p>
+<blockquote>
 <p>select * from 表 a where (a.Id,a.seq) in(select Id,seq from 表 group by Id,seq having count(*) &gt; 1)</p>
+</blockquote>
 <p>4、删除表中多余的重复记录（多个字段），只留有rowid最小的记录</p>
-<p>delete from 表 a where (a.Id,a.seq) in (select Id,seq from 表 group by Id,seq having count(<em>) &gt; 1) and rowid not in (select min(rowid) from 表 group by Id,seq having count(</em>)&gt;1)</p>
+<blockquote>
+<p>delete from 表 a where (a.Id,a.seq) in (select Id,seq from 表 group by Id,seq having count( * ) &gt; 1) and rowid not in (select min(rowid) from 表 group by Id,seq having count( * )&gt;1)</p>
+</blockquote>
 <p>5、查找表中多余的重复记录（多个字段），不包含rowid最小的记录</p>
-<p>select * from 表 a where (a.Id,a.seq) in (select Id,seq from 表 group by Id,seq having count(<em>) &gt; 1) and rowid not in (select min(rowid) from 表 group by Id,seq having count(</em>)&gt;1)</p>
+<blockquote>
+<p>select * from 表 a where (a.Id,a.seq) in (select Id,seq from 表 group by Id,seq having count( * ) &gt; 1) and rowid not in (select min(rowid) from 表 group by Id,seq having count( * )&gt;1)</p>
+</blockquote>
 
             </div>
             
