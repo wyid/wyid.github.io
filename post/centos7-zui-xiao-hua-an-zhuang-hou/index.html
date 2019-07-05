@@ -1,22 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://wyid.github.io</id>
-    <title>wy</title>
-    <updated>2019-07-05T06:17:40.867Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://wyid.github.io"/>
-    <link rel="self" href="https://wyid.github.io/atom.xml"/>
-    <subtitle>你不一样</subtitle>
-    <logo>https://wyid.github.io/images/avatar.png</logo>
-    <icon>https://wyid.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, wy</rights>
-    <entry>
-        <title type="html"><![CDATA[CentOS7最小化安装后]]></title>
-        <id>https://wyid.github.io/post/centos7-zui-xiao-hua-an-zhuang-hou</id>
-        <link href="https://wyid.github.io/post/centos7-zui-xiao-hua-an-zhuang-hou">
-        </link>
-        <updated>2019-07-05T02:44:20.000Z</updated>
-        <content type="html"><![CDATA[<ol>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>CentOS7最小化安装后 | wy</title>
+<meta name="description" content="你不一样">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wyid.github.io/favicon.ico?v=1562307457466">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://wyid.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://wyid.github.io">
+        <img src="https://wyid.github.io/images/avatar.png?v=1562307457466" class="site-logo">
+        <h1 class="site-title">wy</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      你不一样
+    </div>
+    <div class="site-footer">
+      made by wy | <a class="rss" href="https://wyid.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">CentOS7最小化安装后</h2>
+            <div class="post-date">2019-07-05 10:07</div>
+            
+            <div class="post-content">
+              <ol>
 <li>
 <p>查看ip地址：ip addr/ifconfig</p>
 </li>
@@ -61,101 +141,47 @@ export CLASSPATH=.:<span class="katex"><span class="katex-mathml"><math><semanti
 </ol>
 <p>13.挂载/解除：mount -t auto /dev/cdrom /mnt/cdrom
 umount /dev/cdrom</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SQL-删除重复数据]]></title>
-        <id>https://wyid.github.io/post/sql-shan-chu-chong-fu-shu-ju</id>
-        <link href="https://wyid.github.io/post/sql-shan-chu-chong-fu-shu-ju">
-        </link>
-        <updated>2019-05-30T03:10:21.000Z</updated>
-        <content type="html"><![CDATA[<p>查询及删除重复记录的SQL语句</p>
-<p>1、查找表中多余的重复记录，重复记录是根据单个字段（Id）来判断</p>
-<blockquote>
-<p>select * from 表 where Id in (select Id from 表 group byId having count(Id) &gt; 1)</p>
-</blockquote>
-<p>2、删除表中多余的重复记录，重复记录是根据单个字段（Id）来判断，只留有rowid最小的记录</p>
-<blockquote>
-<p>DELETE from 表 WHERE (id) IN ( SELECT id FROM 表 GROUP BY id HAVING COUNT(id) &gt; 1) AND ROWID NOT IN (SELECT MIN(ROWID) FROM 表 GROUP BY id HAVING COUNT(*) &gt; 1);</p>
-</blockquote>
-<p>3、查找表中多余的重复记录（多个字段）</p>
-<blockquote>
-<p>select * from 表 a where (a.Id,a.seq) in(select Id,seq from 表 group by Id,seq having count(*) &gt; 1)</p>
-</blockquote>
-<p>4、删除表中多余的重复记录（多个字段），只留有rowid最小的记录</p>
-<blockquote>
-<p>delete from 表 a where (a.Id,a.seq) in (select Id,seq from 表 group by Id,seq having count( * ) &gt; 1) and rowid not in (select min(rowid) from 表 group by Id,seq having count( * )&gt;1)</p>
-</blockquote>
-<p>5、查找表中多余的重复记录（多个字段），不包含rowid最小的记录</p>
-<blockquote>
-<p>select * from 表 a where (a.Id,a.seq) in (select Id,seq from 表 group by Id,seq having count( * ) &gt; 1) and rowid not in (select min(rowid) from 表 group by Id,seq having count( * )&gt;1)</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SQL-索引约束]]></title>
-        <id>https://wyid.github.io/post/sql-yue-shu</id>
-        <link href="https://wyid.github.io/post/sql-yue-shu">
-        </link>
-        <updated>2019-05-30T03:01:09.000Z</updated>
-        <content type="html"><![CDATA[<p>1、创建索引</p>
-<blockquote>
-<p>create index 索引名 on 表名(列名);</p>
-</blockquote>
-<p>2、删除索引</p>
-<blockquote>
-<p>drop index 索引名;</p>
-</blockquote>
-<p>3、创建组合索引</p>
-<blockquote>
-<p>create index 索引名 on 表名(列名1,,列名2);</p>
-</blockquote>
-<p>4、查询索引
---根据索引名，查询表索引字段</p>
-<blockquote>
-<p>select * from user_ind_columns where index_name='索引名';
---根据表名，查询一张表的索引
-select * from user_indexes where table_name='表名';</p>
-</blockquote>
-<p>5、禁用和重建
---禁用索引</p>
-<blockquote>
-<p>alter index INDEX_BMP_DUTY_H unusable;
---重新启用索引，重建索引
-alter index INDEX_BMP_DUTY_H rebuild;</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://wyid.github.io/post/hello-gridea</id>
-        <link href="https://wyid.github.io/post/hello-gridea">
-        </link>
-        <updated>2018-12-31T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="http://hvenotes.fehey.com/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>𝖶𝗂𝗇𝖽𝗈𝗐𝗌</strong> 或 <strong>𝖬𝖺𝖼𝖮𝖲</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wyid.github.io/post/sql-shan-chu-chong-fu-shu-ju">
+                  <h3 class="post-title">
+                    SQL-删除重复数据
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
