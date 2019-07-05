@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wyid.github.io</id>
     <title>wy</title>
-    <updated>2019-07-05T06:17:40.867Z</updated>
+    <updated>2019-07-05T06:47:35.788Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wyid.github.io"/>
     <link rel="self" href="https://wyid.github.io/atom.xml"/>
@@ -10,6 +10,50 @@
     <logo>https://wyid.github.io/images/avatar.png</logo>
     <icon>https://wyid.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, wy</rights>
+    <entry>
+        <title type="html"><![CDATA[CentOS7-yum安装MySQL5.7]]></title>
+        <id>https://wyid.github.io/post/centos7-yum-an-zhuang-mysql57</id>
+        <link href="https://wyid.github.io/post/centos7-yum-an-zhuang-mysql57">
+        </link>
+        <updated>2019-07-05T06:23:24.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-下载并安装mysql官方repository">1. 下载并安装MySQL官方repository</h2>
+<pre><code>	wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
+</code></pre>
+<p>然后安装</p>
+<pre><code>	yum -y install mysql57-community-release-el7-10.noarch.rpm
+</code></pre>
+<p>然后安装mysql服务器</p>
+<pre><code>	yum -y install mysql-community-server
+</code></pre>
+<h2 id="2配置mysql数据库">2.配置mysql数据库</h2>
+<p>首先启动数据库</p>
+<pre><code>	systemctl start mysqld.service  --启动
+	systemctl stauts mysqld.service   --查看状态
+	grep &quot;password&quot; /var/log/mysqld.log --查看root默认密码
+</code></pre>
+<p>登陆数据库</p>
+<pre><code>	mysql -u root -p 默认密码
+	ALTER USER 'root'@'localhost' IDENTIFIED BY 'new password';
+	或
+	set password for 'root'@'localhost'=password('MyNewPass4!'); 
+	或
+	update mysql.user set authentication_string=password('123456') where user='root' ;
+</code></pre>
+<p>配置mysql可以设置简单密码</p>
+<pre><code>	set global validate_password_policy=0;
+	set global validate_password_length=1;
+	或
+	在 vim /etc/my.cnf配置文件中增加：
+	validate_password=off
+default_password_lifetime=0
+</code></pre>
+<p>查看密码规则</p>
+<pre><code>	show variables like '%password%';
+</code></pre>
+<p>卸载mysql Repository，不然每次yum会自动更新</p>
+<pre><code>	yum -y remove mysql57-community-release-el7-10.noarch</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CentOS7最小化安装后]]></title>
         <id>https://wyid.github.io/post/centos7-zui-xiao-hua-an-zhuang-hou</id>
