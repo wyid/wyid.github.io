@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>D:/software/wyid.github.ioo/output</id>
+    <id>https://wyid.github.io</id>
     <title>wy</title>
-    <updated>2019-07-11T15:37:42.816Z</updated>
+    <updated>2019-07-12T10:47:27.945Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="D:/software/wyid.github.ioo/output"/>
-    <link rel="self" href="D:/software/wyid.github.ioo/output/atom.xml"/>
+    <link rel="alternate" href="https://wyid.github.io"/>
+    <link rel="self" href="https://wyid.github.io/atom.xml"/>
     <subtitle>你不一样</subtitle>
-    <logo>D:/software/wyid.github.ioo/output/images/avatar.png</logo>
-    <icon>D:/software/wyid.github.ioo/output/favicon.ico</icon>
+    <logo>https://wyid.github.io/images/avatar.png</logo>
+    <icon>https://wyid.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, wy</rights>
     <entry>
         <title type="html"><![CDATA[CentOS7-yum安装MySQL5.7]]></title>
-        <id>D:/software/wyid.github.ioo/output/post/centos7-yum-an-zhuang-mysql57/index.html</id>
-        <link href="D:/software/wyid.github.ioo/output/post/centos7-yum-an-zhuang-mysql57/index.html">
+        <id>https://wyid.github.io/post/centos7-yum-an-zhuang-mysql57</id>
+        <link href="https://wyid.github.io/post/centos7-yum-an-zhuang-mysql57">
         </link>
         <updated>2019-07-05T06:23:24.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1-下载并安装mysql官方repository">1. 下载并安装MySQL官方repository</h2>
@@ -56,8 +56,8 @@ default_password_lifetime=0
     </entry>
     <entry>
         <title type="html"><![CDATA[CentOS7最小化安装后]]></title>
-        <id>D:/software/wyid.github.ioo/output/post/centos7-zui-xiao-hua-an-zhuang-hou/index.html</id>
-        <link href="D:/software/wyid.github.ioo/output/post/centos7-zui-xiao-hua-an-zhuang-hou/index.html">
+        <id>https://wyid.github.io/post/centos7-zui-xiao-hua-an-zhuang-hou</id>
+        <link href="https://wyid.github.io/post/centos7-zui-xiao-hua-an-zhuang-hou">
         </link>
         <updated>2019-07-05T02:44:20.000Z</updated>
         <content type="html"><![CDATA[<ol>
@@ -109,8 +109,8 @@ umount /dev/cdrom</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[SQL-删除重复数据]]></title>
-        <id>D:/software/wyid.github.ioo/output/post/sql-shan-chu-chong-fu-shu-ju/index.html</id>
-        <link href="D:/software/wyid.github.ioo/output/post/sql-shan-chu-chong-fu-shu-ju/index.html">
+        <id>https://wyid.github.io/post/sql-shan-chu-chong-fu-shu-ju</id>
+        <link href="https://wyid.github.io/post/sql-shan-chu-chong-fu-shu-ju">
         </link>
         <updated>2019-05-30T03:10:21.000Z</updated>
         <content type="html"><![CDATA[<p>查询及删除重复记录的SQL语句</p>
@@ -138,8 +138,8 @@ umount /dev/cdrom</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[SQL-索引约束]]></title>
-        <id>D:/software/wyid.github.ioo/output/post/sql-yue-shu/index.html</id>
-        <link href="D:/software/wyid.github.ioo/output/post/sql-yue-shu/index.html">
+        <id>https://wyid.github.io/post/sql-yue-shu</id>
+        <link href="https://wyid.github.io/post/sql-yue-shu">
         </link>
         <updated>2019-05-30T03:01:09.000Z</updated>
         <content type="html"><![CDATA[<p>1、创建索引</p>
@@ -172,8 +172,8 @@ alter index INDEX_BMP_DUTY_H rebuild;</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>D:/software/wyid.github.ioo/output/post/hello-gridea/index.html</id>
-        <link href="D:/software/wyid.github.ioo/output/post/hello-gridea/index.html">
+        <id>https://wyid.github.io/post/hello-gridea</id>
+        <link href="https://wyid.github.io/post/hello-gridea">
         </link>
         <updated>2018-12-31T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
