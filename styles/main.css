@@ -459,7 +459,7 @@ body {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding-top: 80px;
+  padding-top: 120px;
   width: 100%;
 }
 .main .main-container {
