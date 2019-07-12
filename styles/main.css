@@ -530,7 +530,7 @@ body {
   font-size: 24px;
 }
 .header .nav .menu-btn {
-  display: block;
+  display: none;
 }
 .header .nav .menu-container {
   display: block;
@@ -555,7 +555,7 @@ body {
     width: 100%;
   }
   .header .nav .logo {
-    display: block;
+    display: none;
   }
   .header .nav .menu-btn {
     display: block;
@@ -565,7 +565,7 @@ body {
     position: absolute;
     top: 50px;
     left: 0;
-    display: block;
+    display: none;
     width: 100%;
     border-top: 1px solid #aaa;
   }
