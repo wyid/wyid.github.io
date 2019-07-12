@@ -558,7 +558,7 @@ body {
     display: none;
   }
   .header .nav .menu-btn {
-    display: block;
+    display: none;
     cursor: pointer;
   }
   .header .nav .menu-container {
