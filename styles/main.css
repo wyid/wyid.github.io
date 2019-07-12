@@ -515,7 +515,7 @@ body {
   width: 960px;
 }
 .header .nav .logo {
-  display: flex;
+  display: block;
   align-items: center;
 }
 .header .nav .logo .avatar {
