@@ -1,179 +1,198 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    About Me | wy
-</title>
-<link rel="shortcut icon" href="https://wyid.github.io/favicon.ico?v=1562943577870">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<title>About Me | wy</title>
+<meta name="description" content="你不一样">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://wyid.github.io/favicon.ico?v=1562943607577">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wyid.github.io/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://wyid.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+
+
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://wyid.github.io">wy</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
         
-</head>
-
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://wyid.github.io">
-                <img class="avatar" src="https://wyid.github.io/images/avatar.png?v=1562943577870" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    wy
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
-                <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                            About Me
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">2019-01-25 19:01</time>
-                            
-                        </div>
-                        
-                                <div class="post-content">
-                                    <p>好好学习，天天向上！</p>
-
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
-                </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
-                    
-                                <!-- id-card -->
-                                
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://wyid.github.io/images/avatar.png?v=1562943577870)">
-        </div>
-        <h1 class="id_card-title">
-            wy
-        </h1>
-        <h2 class="id_card-description">
-            你不一样
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
+          <li>
             
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                    <!-- facebook -->
-                                    
-
-        </div>
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
     </div>
-    
-                                    
+  </div>
+</nav>
 
-                </div>
-
-
-
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>About Me</h1>
+            <p class="article-meta">
+              2019-01-25 19:01
+              
+            </p>
+            
+            <div class="post-content">
+              <p>好好学习，天天向上！</p>
 
             </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+        </div>
+        
+      </div>
 
-
-            <div class="site-footer">
-  made by wy | 
-  <a class="rss" href="https://wyid.github.io/atom.xml" target="_blank">RSS</a>
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://wyid.github.io/images/avatar.png?v=1562943607577" class="no-responsive avatar">
+    <div class="text-muted">你不一样</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://wyid.github.io/post/centos7-yum-an-zhuang-mysql57">CentOS7-yum安装MySQL5.7</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wyid.github.io/post/centos7-zui-xiao-hua-an-zhuang-hou">CentOS7最小化安装后</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wyid.github.io/post/sql-shan-chu-chong-fu-shu-ju">SQL-删除重复数据</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wyid.github.io/post/sql-yue-shu">SQL-索引约束</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wyid.github.io/post/hello-gridea">Hello Gridea</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://wyid.github.io/tag/3TkDahxcr" class="badge ">
+          SQL
+        </a>
+      
+        <a href="https://wyid.github.io/tag/gridea" class="badge secondary">
+          Gridea
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    made by wy | <a class="rss" href="https://wyid.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
 </script>
 
 
-    </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-    
-</body>
 
+
+  </body>
 </html>
