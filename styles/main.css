@@ -595,7 +595,7 @@ body {
 }
 .post-container .post .post-title {
   margin-bottom: 10px;
-  border-bottom: 1px solid #2e9fff;
+  border-bottom: 1px none #2e9fff;
 }
 .post-container .post .post-title a:hover {
   color: #2e9fff;
