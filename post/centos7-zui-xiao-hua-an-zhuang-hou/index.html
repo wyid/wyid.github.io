@@ -7,7 +7,7 @@
 <title>
     CentOS7最小化安装后 | wy
 </title>
-<link rel="shortcut icon" href="https://wyid.github.io/favicon.ico?v=1563009569583">
+<link rel="shortcut icon" href="https://wyid.github.io/favicon.ico?v=1563009768369">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -28,7 +28,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://wyid.github.io">
-                <img class="avatar" src="https://wyid.github.io/images/avatar.png?v=1563009569583" alt="">
+                <img class="avatar" src="https://wyid.github.io/images/avatar.png?v=1563009768369" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -108,34 +108,32 @@
                         
                                 <div class="post-content">
                                     <p>centos7选择最小化安装后，配置过程：</p>
-<ol>
-<li>查看ip地址：ip addr/ifconfig</li>
-<li>修改ip地址：/etc/sysconfig/network-script/网卡，修改onboot=yes</li>
-<li>BOOTPROTO=dhcp --&gt;BOOTPROTO=static IP获取方式改为静态获取
-ZONE=public   firewalld  zone=piblic（公共）：在公共区域内使用，不能相信网络内其他计算机不会对你造成危害，只能接受经过选取的连接。
-PADDR=10.82.17.71  IP地址
+<p>查看ip地址：ip addr/ifconfig</p>
+<p>修改ip地址：/etc/sysconfig/network-script/网卡，修改onboot=yes
+BOOTPROTO=dhcp --&gt;BOOTPROTO=static IP获取方式改为静态获取
+ZONE=public   firewalld  zone=piblic（公共）：在公共区域内使用，不能相信网络内其他计算机不会对你造成危害，只能接受经过选取的连接。</p>
+<p>PADDR=10.82.17.71  IP地址
 ATEWAY=10.82.17.1 网关 ，与虚拟机虚拟网卡VMnet8中设置的网关保持一致
 ETMASK=255.255.255.0 子网掩码
 DNS1=10.82.1.4
-DNS2=10.82</li>
-<li>安装wget</li>
-<li>配置源</li>
-<li>安装vim</li>
-<li>重启网络：service network restart</li>
-<li>修改主机名：hostname/hostnamectl
+DNS2=10.82</p>
+<p>安装wget
+配置源
+安装vim
+重启网络：service network restart
+修改主机名：hostname/hostnamectl
 hostnamectl set-hostname centos
 vim /etc/hostname
-9.自动补全：yum install bash-completion
-10.查询jdk安装：rpm -qa|grep java/jdk/gcj
-11.卸载jdk：rpm -e --nodeps<br>
-12.配置环境变量：/etc/profile
+自动补全：yum install bash-completion
+查询jdk安装：rpm -qa|grep java/jdk/gcj
+卸载jdk：rpm -e --nodeps<br>
+配置环境变量：/etc/profile
 export JAVA_HOME=/opt/jdk1.8.0_144
 export CLASSPATH=.:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>J</mi><mi>A</mi><mi>V</mi><msub><mi>A</mi><mi>H</mi></msub><mi>O</mi><mi>M</mi><mi>E</mi><mi mathvariant="normal">/</mi><mi>j</mi><mi>r</mi><mi>e</mi><mi mathvariant="normal">/</mi><mi>l</mi><mi>i</mi><mi>b</mi><mi mathvariant="normal">/</mi><mi>r</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi>j</mi><mi>a</mi><mi>r</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">JAVA_HOME/jre/lib/rt.jar:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.08125em;">H</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">b</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span>JAVA_HOME/lib/dt.jar:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>J</mi><mi>A</mi><mi>V</mi><msub><mi>A</mi><mi>H</mi></msub><mi>O</mi><mi>M</mi><mi>E</mi><mi mathvariant="normal">/</mi><mi>l</mi><mi>i</mi><mi>b</mi><mi mathvariant="normal">/</mi><mi>t</mi><mi>o</mi><mi>o</mi><mi>l</mi><mi>s</mi><mi mathvariant="normal">.</mi><mi>j</mi><mi>a</mi><mi>r</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">JAVA_HOME/lib/tools.jar
-		export PATH=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.08125em;">H</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">b</span><span class="mord">/</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">s</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>PATH:$JAVA_HOME/bin
-source /etc/profile
-13.挂载/解除：mount -t auto /dev/cdrom /mnt/cdrom
-umount /dev/cdrom</li>
-</ol>
+			export PATH=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.08125em;">H</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">b</span><span class="mord">/</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">s</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>PATH:$JAVA_HOME/bin
+source /etc/profile</p>
+<p>挂载/解除：mount -t auto /dev/cdrom /mnt/cdrom
+umount /dev/cdrom</p>
 
                                 </div>
                     </article>
@@ -161,7 +159,7 @@ umount /dev/cdrom</li>
                                 <!-- id-card -->
                                 
     <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://wyid.github.io/images/avatar.png?v=1563009569583)">
+        <div class="id_card-avatar" style="background-image: url(https://wyid.github.io/images/avatar.png?v=1563009768369)">
         </div>
         <h1 class="id_card-title">
             wy
