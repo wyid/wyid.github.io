@@ -56,13 +56,13 @@
             text-align: center;
         }
         
-        .timer {
+        .show_date_time {
             font-size: 180%;
             line-height: 1.5;
             margin: 1em 0;
         }
         
-        .timer b {
+        .show_date_time b {
             color: rgb(253, 99, 125);
         }
     </style>
@@ -71,12 +71,12 @@
 <body>
 <div class="content">
         <h2>Darling<br> we've been together for</h2>
-        <div class="timer">
-		<b id="dd"></b> Days <br> is <br>
-            <b id="y"></b> Years <b id="d"></b> Days <br><b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
+        <div class="show_date_time">
+		<b id="d"></b> Days <br> is <br>
+            <b id="y"></b> Years <b id="dd"></b> Days <br><b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
         </div>
     </div>
-    <script language="javascript">
+    <!--script language="javascript">
         function timer() {
           window.setTimeout("show_date_time()", 1000);
           var start = new Date("2014-02-22 00:00:00"); // 2015.7.2
@@ -102,13 +102,12 @@
             document.getElementById('s').innerHTML = s;
         }
         timer();
-    </script>
+    </script-->
 	
-	<!-->
     <script language="javascript">
 	    function show_date_time() {
 	        window.setTimeout("show_date_time()", 1000);
-	        BirthDay = new Date("6/7/2018 00:00:00");//这个日期是可以修改的
+	        BirthDay = new Date("2/22/2014 00:00:00");//这个日期是可以修改的
 	        today = new Date();
 	        timeold = (today.getTime() - BirthDay.getTime());
 	        sectimeold = timeold / 1000
@@ -116,18 +115,21 @@
 	        msPerDay = 24 * 60 * 60 * 1000
 	        e_daysold = timeold / msPerDay
 	        daysold = Math.floor(e_daysold);
+		ddaysold=daysold%365;
 	        e_hrsold = (e_daysold - daysold) * 24;
+		yearsold = daysold/365;
 	        hrsold = Math.floor(e_hrsold);
 	        e_minsold = (e_hrsold - hrsold) * 60;
 	        minsold = Math.floor((e_hrsold - hrsold) * 60);
 	        seconds = Math.floor((e_minsold - minsold) * 60);
-          
+          document.getElementById('y').innerHTML = yearsold;
+	  document.getElementById('dd').innerHTML = ddaysold;
+	  document.getElementById('d').innerHTML = daysold;
           document.getElementById('h').innerHTML = hrsold;
           document.getElementById('m').innerHTML = minsold;
           document.getElementById('s').innerHTML = seconds;
 	    }
 	    show_date_time();
 	</script>
-  <!-->
 </body>
 </html>
