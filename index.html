@@ -1,7 +1,12 @@
-<!DCOTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>YQ</title>
 <SCRIPT LANGUAGE="JavaScript">
             function password() 
             {
@@ -11,7 +16,7 @@
                 {
                     if (!pass1)
                     history.go(-1);
-                    if (pass1 == "123456") 
+                    if (pass1 == "0607") 
                     {
                         
                         break;
@@ -20,14 +25,10 @@
                     var pass1 =
                     prompt('密码错误!请重新输入:');
                 }
+				return " ";
             }
             document.write(password());
         </SCRIPT>
-<meta name="viewport" content="width=device-width">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="renderer" content="webkit">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>YQ</title>
 <style>
         body {
             -webkit-font-smoothing: antialiased;
@@ -65,7 +66,7 @@
 <div class="content">
         <h2>Darling we've been together for</h2>
         <div class="timer">
-		<b id="dd"></b> Days <br>| |<br> 
+		<b id="dd"></b> Days <br> IS <br>
             <b id="y"></b> Years <b id="d"></b> Days <br><b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
         </div>
     </div>
@@ -74,8 +75,7 @@
           window.setTimeout("show_date_time()", 1000);
           var start = new Date("2014-02-22 00:00:00"); // 2015.7.2
             var t = new Date().getTime() - start;
-            var y = ~~(t/1000/60/60/24/365)
-	 
+			var y = ~~(t/1000/60/60/24/365)
             var h = ~~(t / 1000 / 60 / 60 % 24);
             if (h < 10) {
                 h = "0" + h;
@@ -88,14 +88,40 @@
             if (s < 10) {
                 s = "0" + s;
             }
-            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24 % 365);
-	    document.getElementById('dd').innerHTML = ~~(t / 1000 /60 /60 /24);
-            document.getElementById('y').innerHTML = y;
+            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24 %365);
+			document.getElementById('dd').innerHTML = ~~(t / 1000 /60 /60 /24);
+			document.getElementById('y').innerHTML = y;
             document.getElementById('h').innerHTML = h;
             document.getElementById('m').innerHTML = m;
             document.getElementById('s').innerHTML = s;
         }
         timer();
     </script>
+	
+	<!-->
+    <script language="javascript">
+	    function show_date_time() {
+	        window.setTimeout("show_date_time()", 1000);
+	        BirthDay = new Date("6/7/2018 00:00:00");//这个日期是可以修改的
+	        today = new Date();
+	        timeold = (today.getTime() - BirthDay.getTime());
+	        sectimeold = timeold / 1000
+	        secondsold = Math.floor(sectimeold);
+	        msPerDay = 24 * 60 * 60 * 1000
+	        e_daysold = timeold / msPerDay
+	        daysold = Math.floor(e_daysold);
+	        e_hrsold = (e_daysold - daysold) * 24;
+	        hrsold = Math.floor(e_hrsold);
+	        e_minsold = (e_hrsold - hrsold) * 60;
+	        minsold = Math.floor((e_hrsold - hrsold) * 60);
+	        seconds = Math.floor((e_minsold - minsold) * 60);
+          document.getElementById('d').innerHTML = daysold;
+          document.getElementById('h').innerHTML = hrsold;
+          document.getElementById('m').innerHTML = minsold;
+          document.getElementById('s').innerHTML = seconds;
+	    }
+	    show_date_time();
+	</script>
+  <!-->
 </body>
 </html>
