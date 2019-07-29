@@ -1,376 +1,81 @@
+<!DCOTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    wy
-</title>
-<link rel="shortcut icon" href="https://wyid.github.io/favicon.ico?v=1563016072661">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://wyid.github.io/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://wyid.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
-
-
+<meta charset="utf-8">
+<script language="JavaScript"><!--var password="";
+password=prompt('请输入密码 (本网站需输入密码才可进入):','');if (password != '0607')   
+{alert("密码不正确,无法进入本站!!");    
+window.opener=null; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>YQ</title>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+            font-size: 85%;
+            margin: 0;
+        }
+        
+        h2 {
+            font-size: 220%;
+            font-weight: 400;
+        }
+        
+        .content {
+            position: absolute;
+            width: 100%;
+            top: 40%;
+            transform: translate(0, -50%);
+            text-align: center;
+        }
+        
+        .timer {
+            font-size: 180%;
+            line-height: 1.5;
+            margin: 1em 0;
+        }
+        
+        .timer b {
+            color: rgb(253, 99, 125);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://wyid.github.io">
-                <img class="avatar" src="https://wyid.github.io/images/avatar.png?v=1563016072661" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    wy
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
+<div class="content">
+        <h2>Darling we've been together for</h2>
+        <div class="timer">
+            <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
         </div>
     </div>
-</div>
-
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
+    <script language="javascript">
+        function timer() {
+          window.setTimeout("show_date_time()", 1000);
+          var start = new Date("2014-02-22 00:00:00"); // 2015.7.2
+            var t = new Date().getTime() - start;
+            var h = ~~(t / 1000 / 60 / 60 % 24);
+            if (h < 10) {
+                h = "0" + h;
             }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-container main-container">
-                <div id="content" class="main-container-left">
-                    
-        
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wyid.github.io/post/zui-xiao-hua-an-zhuang-centos7-hou-ji-ben-pei-zhi">
-                        最小化安装CentOS7后基本配置
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-13 18:07</time>
-                    
-                        <a href="https://wyid.github.io/tag/s_FdVbikF" class="post-tag i-tag
-                            i-tag-other_4">
-            #Linux
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            查看ip地址：ip addr/ifconfig
-修改ip地址：/etc/sysconfig/network-script/网卡，修改onboot=yes
-BOOTPROTO=dhcp --&amp;gt;BOOTPROTO=static IP获取方式改为静态获取
-ZONE=public   firewalld  zone=piblic（公共）：在公共区域内使用，不能相信网络内其他计算机不会对你造成危害，只能接受经过选取的连接。
-PADDR=10.82.17.71  IP地址
-ATEWAY=10.82.17.1 网关 ，与虚拟机虚拟网卡VMnet8中设置的网关保持一致
-ETMASK=255.255.255.0 子网掩码
-DNS1=10.82.1.4
-DNS2=10.82
-安装wget--配置yum源--安装vim--重启网络：service network restart
-修改主机名:hostname/hostnamectl
-hostnamectl set-hostname centos
-vim /etc/hostname
-自动补全：yum install bash-completion
-查询jdk安装：rpm -qa|grep java/jdk/gcj
-卸载jdk：rpm -e --nodeps
-配置环境变量：/etc/profile    配置后：source /etc/profile
-挂载/解除：mount -t auto /dev/cdrom /mnt/cdrom
-umount /dev/cdrom
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://wyid.github.io/post/zui-xiao-hua-an-zhuang-centos7-hou-ji-ben-pei-zhi">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wyid.github.io/post/centos7-yum-an-zhuang-mysql57">
-                        CentOS7-yum安装MySQL5.7
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-05 14:07</time>
-                    
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            1. 下载并安装MySQL官方repository
-	wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
-
-然后安装
-	yum -y install mysql57-community-release-el7-10.noarch.rpm
-
-然后安装mysql服务器
-	yum -y install mysql-community-server
-
-2.配置mysql数据库
-首先启动数据库
-	systemctl start mysqld.service  --启动
-	systemctl stauts mysqld.service   --查看状态
-	grep &amp;quot;password&amp;quot; /var/log/mysqld.log --查看root默认密码
-
-登陆数据库
-	mysql -u root -p 默认密码
-	ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;new password&#39;;
-	或
-	set password for &#39;root&#39;@&#39;localhost&#39;=password(&#39;MyNewPass4!&#39;); 
-	或
-	update mysql.user set authentication_string=password(&#39;123456&#39;) where user=&#39;root&#39; ;
-
-配置mysql可以设置简单密码
-	set global validate_password_policy=0;
-	set global validate_password_length=1;
-	或
-	在 vim /etc/my.cnf配置文件中增加：
-	validate_password=off
-default_password_lifetime=0
-
-查看密码规则
-	show variables like &#39;%password%&#39;;
-
-卸载mysql Repository，不然每次yum会自动更新
-	yum -y remove mysql57-community-release-el7-10.noarch
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://wyid.github.io/post/centos7-yum-an-zhuang-mysql57">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wyid.github.io/post/sql-shan-chu-chong-fu-shu-ju">
-                        SQL-删除重复数据
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-05-30 11:05</time>
-                    
-                        <a href="https://wyid.github.io/tag/3TkDahxcr" class="post-tag i-tag
-                            i-tag-primary">
-            #SQL
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            查询及删除重复记录的SQL语句
-1、查找表中多余的重复记录，重复记录是根据单个字段（Id）来判断
-
-select * from 表 where Id in (select Id from 表 group byId having count(Id) &amp;gt; 1)
-
-2、删除表中多余的重复记录，重复记录是根据单个字段（Id）来判断，只留有rowid最小的记录
-
-DELETE from 表 WHERE (id) IN ( SELECT id FROM 表 GROUP BY id HAVING COUNT(id) &amp;gt; 1) AND ROWID NOT IN (SELECT MIN(ROWID) FROM 表 GROUP BY id HAVING COUNT(*) &amp;gt; 1);
-
-3、查找表中多余的重复记录（多个字段）
-
-select * from 表 a where (a.Id,a.seq) in(select Id,seq from 表 group by Id,seq having count(*) &amp;gt; 1)
-
-4、删除表中多余的重复记录（多个字段），只留有rowid最小的记录
-
-delete from 表 a where (a.Id,a.seq) in (select Id,seq from 表 group by Id,seq having count( * ) &amp;gt; 1) and rowid not in (select min(rowid) from 表 group by Id,seq having count( * )&amp;gt;1)
-
-5、查找表中多余的重复记录（多个字段），不包含rowid最小的记录
-
-select * from 表 a where (a.Id,a.seq) in (select Id,seq from 表 group by Id,seq having count( * ) &amp;gt; 1) and rowid not in (select min(rowid) from 表 group by Id,seq having count( * )&amp;gt;1)
-
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://wyid.github.io/post/sql-shan-chu-chong-fu-shu-ju">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wyid.github.io/post/sql-yue-shu">
-                        SQL-索引约束
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-05-30 11:05</time>
-                    
-                        <a href="https://wyid.github.io/tag/3TkDahxcr" class="post-tag i-tag
-                            i-tag-other_4">
-            #SQL
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            1、创建索引
-
-create index 索引名 on 表名(列名);
-
-2、删除索引
-
-drop index 索引名;
-
-3、创建组合索引
-
-create index 索引名 on 表名(列名1,,列名2);
-
-4、查询索引
---根据索引名，查询表索引字段
-
-select * from user_ind_columns where index_name=&#39;索引名&#39;;
---根据表名，查询一张表的索引
-select * from user_indexes where table_name=&#39;表名&#39;;
-
-5、禁用和重建
---禁用索引
-
-alter index INDEX_BMP_DUTY_H unusable;
---重新启用索引，重建索引
-alter index INDEX_BMP_DUTY_H rebuild;
-
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://wyid.github.io/post/sql-yue-shu">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-                <!-- 翻页 -->
-                
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
-
-                    <!-- 个人信息 -->
-                    
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://wyid.github.io/images/avatar.png?v=1563016072661)">
-        </div>
-        <h1 class="id_card-title">
-            wy
-        </h1>
-        <h2 class="id_card-description">
-            你不一样
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
-            
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                    <!-- facebook -->
-                                    
-
-        </div>
-    </div>
-    
-
-                        <!-- 公告栏 -->
-                        
-    <div class="notice-card i-card ">
-        <div class="notice-title i-card-title">公告</div>
-        <div class="notice-content">
-            公告
-        </div>
-    </div>
-    
-
-                </div>
-            </div>
-
-
-
-            <div class="site-footer">
-  made by wy | 
-  <a class="rss" href="https://wyid.github.io/atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
-    </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
+            var m = ~~(t / 1000 / 60 % 60);
+            if (m < 10) {
+                m = "0" + m;
+            }
+            var s = ~~(t / 1000 % 60);
+            if (s < 10) {
+                s = "0" + s;
+            }
+            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('h').innerHTML = h;
+            document.getElementById('m').innerHTML = m;
+            document.getElementById('s').innerHTML = s;
+        }
+        timer();
     </script>
 </body>
-
 </html>
