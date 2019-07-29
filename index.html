@@ -68,7 +68,7 @@
 	        daysold = Math.floor(e_daysold);
 		ddaysold=daysold%365;
 	        e_hrsold = (e_daysold - daysold) * 24;
-		yearsold = daysold/365;
+		yearsold = parseInt(daysold/365);
 	        hrsold = Math.floor(e_hrsold);
 	        e_minsold = (e_hrsold - hrsold) * 60;
 	        minsold = Math.floor((e_hrsold - hrsold) * 60);
