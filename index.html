@@ -17,23 +17,21 @@
     var flag2=0;
 
     $("#box").click(function(){
-  ```
+  
         if(flag%2==0){
 
-          $('#box').css({"left":"10%","top":"15%","-webkit-transform":"scale(1.0)","z-index":"1"});
+          $('#box').css({"left":"25%","top":"15%","-webkit-transform":"scale(1.0)","z-index":"1"});
           $("#box2").css("z-index","0");
           $('#box .image').css({"opacity":"1"});
           $(".image_content").css("background","url(image/card.jpg)");
           $("#box").unbind("mouseover");
           $("#box").unbind("mouseleave");
-          
-          
         }
-      ```    
+          
         if(flag%2!=0){
-          $('#box').css({"left":"-15%","top":"15%","-webkit-transform":"scale(0.6) rotate(-15deg)"});
+          $('#box').css({"left":"25%","top":"15%","-webkit-transform":"scale(0.6) rotate(-15deg)"});
           $('.image').css({"opacity":"0.5"});
-          $(".image_content").css("background","url(image/card2.jpg)");
+          $(".image_content").css("background","url(image/card.jpg)");
           $("#box").bind("mouseover",function(){
               $('#box').css({"background-color":"#B5B5B5","-webkit-transform":"scale(0.8) rotate(-5deg) translate(120px,20px)"});
           });
@@ -49,14 +47,21 @@
 </script>
 <!--Adobe Edge Runtime End-->
 <link rel="stylesheet" type="text/css" href="css/index.css"/>
-<link rel="stylesheet" type="text/css" href="css/grumble.min.css"/>
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?ed9eb61b6411583677fd2e4d30b497ee";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
 </head>
 <body>
   
-
-  <div id="box2">
+  <!--div id="box2">
 	<div class="image"><img id="imgbox" src="image/card.jpg"/></div>
-	</div>
+	</div-->
   <div id="box">
   <div class="image"><div class="image_content"></div></div>
   </div>
