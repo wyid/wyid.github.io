@@ -6,8 +6,18 @@
 <title>love</title>
 <link href="favicon.ico" rel="shortcut icon" />
 <style>
+  @font-face
+	{
+	font-family: myFirstFont;
+	src: url('./font/qingke.ttf');
+	font-family: my;
+	src: url('./font/montague.ttf');
+	font-family: two;
+	src:url('./font/SerentinaScript.otf');
+	}
 body{
   overflow: hidden;
+  font-family: "my","two";
   margin: 0;
 }
 h1{
@@ -147,6 +157,14 @@ window.onload=function starttime(){
         return true;
     }
 </script>
-
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?858bba57d88a9fcea985f2f1cd2aeac0";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 </body>
 </html>
