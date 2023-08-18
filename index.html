@@ -190,7 +190,7 @@
 	    show_date_time();
 	function show_week_time() {
 	        window.setTimeout("show_week_time()", 1000);
-	        thatDay = new Date("10/28/2022 00:00:00");//这个日期是可以修改的
+	        thatDay = new Date("07/29/2023 00:00:00");//这个日期是可以修改的
 	        today2 = new Date();
 	        timeold3 = (today2.getTime() - thatDay.getTime());
 	        sectimeold3 = timeold3 / 1000
@@ -203,8 +203,8 @@
 		weeksold = parseInt(daysold2/7);
 	        
 	        
-            birDay = new Date("8/5/2023 00:00:00");//这个日期是可以修改的
-            timeold2 = ( birDay.getTime() - today2.getTime());
+            birDay = new Date("7/29/2023 00:00:00");//这个日期是可以修改的
+            timeold2 = ( today2.getTime() - birDay.getTime() );
             sectimeold2 = timeold2 / 1000
 	        secondsold2 = Math.floor(sectimeold2);
             djs_daysold = parseInt(timeold2 / msPerDay2)
