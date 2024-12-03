@@ -195,9 +195,7 @@
         let years = end.getFullYear() - start.getFullYear();
         let months = end.getMonth() - start.getMonth();
         let days = end.getDate() - start.getDate();
-        let hours = end.getHours() - start.getHours();
-        let minutes = end.getMinutes() - start.getMinutes();
-        let seconds = end.getSeconds() - start.getSeconds();
+
 
         if (days < 0) {
           // 借一天
@@ -219,9 +217,7 @@
         document.getElementById("m").innerHTML = months; // 剩余天数
         document.getElementById("d").innerHTML = days;
         document.getElementById("ad").innerHTML = adays;
-        document.getElementById("hh").innerHTML = hours;
-        document.getElementById("mm").innerHTML = minutes;
-        document.getElementById("ss").innerHTML = seconds;
+
       }
       show_date_time();
       function show_week_time() {
